@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 function PizzaBlock({ id, title, price, imageUrl, sizes, types }) {
   const [actSize, setactSize] = React.useState(0);
   const [actType, setactType] = React.useState(1);
-  const { items } = useSelector((state) => state.CartSlice);
   const typeName = ['тонкое', 'традиционное'];
   const cartItem = useSelector((state) => state.CartSlice.items.find((obj) => obj.id === id));
   const addCount = cartItem ? cartItem.count : 0;
